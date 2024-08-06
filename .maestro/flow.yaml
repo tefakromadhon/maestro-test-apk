@@ -1,3 +1,4 @@
 appId: tech.jala.android
 ---
 - launchApp
+- tapOn: "Masuk"
