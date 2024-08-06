@@ -1,6 +1,3 @@
-# flow.yaml
-
 appId: tech.jala.android
 ---
 - launchApp
-- tapOn: "Text on the screen"
