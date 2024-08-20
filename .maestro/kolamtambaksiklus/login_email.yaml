@@ -1,0 +1,55 @@
+appId: tech.jala.android.lite
+name: template_login
+tags:
+  - login
+---
+- clearState
+- launchApp
+
+- tapOn:
+    label: "Pilih tombol [Masuk]"
+    text: "Masuk"
+    
+
+- tapOn: 
+    text: "Masuk dengan No HP atau Email"
+    label: "Pilih tombol [Masuk dengan No HP atau Email]"
+    
+
+
+- tapOn: 
+    text: "No. Handphone atau Email"
+    label: "Masukkan alamat email jala.automation@gmail.com"
+    index: 1
+- inputText: 
+    text: "jala.automation@gmail.com"
+    label: "Ketik email jala.automation@gmail.com"
+    
+
+
+- tapOn:
+    text: "Kata Sandi"
+    label: "Masukkan password: jalaistimewa"
+    index: 1
+
+- inputText: 
+    text: "jalaistimewa"
+    label: "Ketik password"
+
+- hideKeyboard
+
+- tapOn: 
+    text: "Masuk"
+    label: "Pilih tombol [Masuk]"
+    index: 1
+
+- waitForAnimationToEnd:
+    timeout: 5000
+
+# Assert Data~
+- assertVisible: 
+    text: "Lite" ##Pastikan di Widget Inspector apakah bisa di pick
+    label: "Assert dapat masuk ke page Beranda"
+
+
+#REVISI

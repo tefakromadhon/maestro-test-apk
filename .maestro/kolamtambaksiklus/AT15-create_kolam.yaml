@@ -1,0 +1,152 @@
+appId: tech.jala.android.lite
+name: AT15
+tags:
+  - AT15
+---
+- clearState
+- launchApp
+
+## [CREATE]
+# 1. Login akun jala.automationa
+- runFlow: login_email.yaml
+
+
+
+#Bugfix
+- tapOn:
+    text: "Lite"
+    repeat: 3
+    delay: 5000
+
+
+
+
+
+# 2. Pilih menu [Kolam]
+- tapOn: 
+    point: 238, 689 #Kolam
+    waitToSettleTimeoutMs: 2000 # ms
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 5000
+    label: "Memproses step selanjutnya"
+
+
+
+
+# 3. Pilih field Tambak = "Test Automation"
+- tapOn: 
+    point: 306, 218 #Pilih field tambak
+- tapOn: "Test Automation"
+# 4. Pilih tombol [Tambah Kolam]
+- tapOn: "Tambah Kolam"
+
+# 5. Pilih tombol [Buat Kolam]
+- tapOn: "Buat Kolam"
+# 6. Input field nama awalan kolam = "AUT"
+- tapOn:
+    text: "A"
+- eraseText
+- inputText: 
+    text: "AUT"
+# 7. Input field 'Nama Kolam' = "AUT2.1"
+- tapOn:
+    text: "AUT.*"
+    index: 1
+- eraseText
+- inputText:
+    text: "AUT2.1"
+- hideKeyboard
+- tapOn: 
+    text: "Buat Kolam"
+    index: 0
+    repeat: 2
+    delay: 2000
+    label: Menunggu dulu untuk step selanjutnya
+# 8. Input field 'Panjang Kolam' = "10"
+- tapOn:
+    point: 155,788
+- inputText:
+    text: "10"
+    label: "input field panjang kolam = 10"
+- hideKeyboard
+- tapOn: 
+    text: "Buat Kolam"
+    index: 0
+    repeat: 2
+    delay: 2000
+    label: Menunggu dulu untuk step selanjutnya
+
+# 9. Input field 'Lebar Kolam' = "12"
+- tapOn:
+    point: 448, 793
+- inputText:
+    text: "12"
+    label: "input field lebar kolam = 12"
+- hideKeyboard
+- tapOn: 
+    text: "Buat Kolam"
+    index: 0
+    repeat: 2
+    delay: 2000
+    label: Menunggu dulu untuk step selanjutnya
+
+# 10. Input field 'Kedalaman' = "1.5"
+- tapOn:
+    point: 457, 892
+- inputText:
+    text: "1.5"
+- hideKeyboard
+- tapOn: 
+    text: "Buat Kolam"
+    index: 0
+    repeat: 2
+    delay: 2000
+    label: Menunggu dulu untuk step selanjutnya
+# 11. Pilih tombol [Buat Kolam]
+- tapOn: 
+    text: "Buat Kolam"
+    index: 1
+    enabled: on
+    delay: 2000
+
+##ASSERT DATA NANTI MASUKKAN KESINI
+- stopApp
+
+#REVISI
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+
+
+
+
+
+  
+
+

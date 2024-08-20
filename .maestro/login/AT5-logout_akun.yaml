@@ -1,0 +1,97 @@
+appId: tech.jala.android.lite
+name: AT5
+tags:
+  - AT5
+---
+- clearState
+- launchApp
+
+- tapOn:
+    label: "Pilih tombol [Masuk]"
+    text: "Masuk"
+    
+
+- tapOn: 
+    text: "Masuk dengan No HP atau Email"
+    label: "Pilih tombol [Masuk dengan No HP atau Email]"
+    
+
+
+- tapOn: 
+    text: "No. Handphone atau Email"
+    label: "Masukkan alamat email jala.automation@gmail.com"
+    index: 1
+- inputText: 
+    text: "jala.automation@gmail.com"
+    label: "Ketik email jala.automation@gmail.com"
+    
+
+
+- tapOn:
+    text: "Kata Sandi"
+    label: "Masukkan password: jalaistimewa"
+    index: 1
+
+- inputText: 
+    text: "jalaistimewa"
+    label: "Ketik password"
+
+- tapOn:
+    text: "Masuk"
+    label: "Menyembunyikan keyboard terlebih dahulu"
+
+- tapOn: 
+    text: "Masuk"
+    label: "Pilih tombol [Masuk]"
+    index: 1
+
+- waitForAnimationToEnd:
+    timeout: 5000
+
+# Assert Data
+- assertVisible: 
+    text: "Lite" ##Pastikan di Widget Inspector apakah bisa di pick~
+    label: "Assert dapat masuk ke page Beranda"
+
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 2000
+    label: "Memproses step selanjutnya"
+
+#Tap Akun
+
+- tapOn:
+    point: 545, 1155
+    label: "Tap pada Akun"
+
+- scrollUntilVisible:
+    element: 
+      text: "Keluar"
+    direction: down
+
+- tapOn:
+    text: "Keluar"
+
+- tapOn:
+    text: "Keluar"
+
+- extendedWaitUntil:
+    visible: "Masuk"
+    timeout: 10000
+    label: "Redirect ke Halaman Login"
+
+
+#Assert Visible
+- assertVisible:
+    text: "Selamat Datang di JALA"
+- assertVisible:
+    text: "Masuk"
+
+- stopApp
+
+#REVISI
+
+
+

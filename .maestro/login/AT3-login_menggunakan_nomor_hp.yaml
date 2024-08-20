@@ -1,0 +1,56 @@
+appId: tech.jala.android.lite
+name: AT3
+tags:
+  - AT3
+---
+- clearState
+- launchApp
+
+
+- tapOn: 
+    text: "Masuk"
+    label: "Tap tombol masuk"
+
+
+- tapOn: 
+    text: "Masuk dengan No HP atau Email"
+    label: "Tap tombol [Masuk dengan No HP atau Email]"
+
+
+- tapOn: 
+    text: "No. Handphone atau Email"
+    label: "Tap tombol pada form [No. Handphone atau Email]"
+    index: 1
+- inputText: 
+    text: "08888321272"
+    label: "Mengetik nomor handphone"
+
+
+- tapOn:
+    text: "Kata Sandi"
+    label: "Masukkan password: jalaistimewa"
+    index: 1
+- inputText: 
+    text: "jalaistimewa"
+    label: "Mengetik password"
+
+
+- tapOn:
+    text: "Masuk"
+    label: "Menyembunyikan keyboard terlebih dahulu"
+
+- tapOn: 
+    text: "Masuk"
+    label: "Pilih tombol [Masuk]"
+    index: 1
+
+- waitForAnimationToEnd:
+    timeout: 5000
+
+# Assert Data
+- assertVisible: 
+    text: "Lite" ##Pastikan di Widget Inspector apakah bisa di pick
+    label: "Assert dapat masuk ke page Beranda"
+
+- stopApp
+#REVISI
