@@ -1,0 +1,126 @@
+appId: tech.jala.android.lite
+name: AT22
+tags:
+  - AT22
+---
+- clearState
+- launchApp
+
+## [CREATE]
+# 1. Login akun jala.automationa
+- runFlow: login_email.yaml
+
+#Bugfix
+- tapOn:
+    text: "Lite"
+    repeat: 3
+    delay: 5000
+
+# 2. Pilih menu [Kolam]
+- tapOn: 
+    point: 238, 689 #Kolam
+    waitToSettleTimeoutMs: 5000 # ms
+    label: "Tap untuk masuk pada menu [Kolam]"
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 5000
+    label: "Memproses step selanjutnya"
+
+# 3. Pilih field Tambak = "Test Automation"
+- tapOn: 
+    point: 306, 218 #Pilih field tambak
+    label: "Tap untuk memilih field tambak yang diinginkan"
+- tapOn: "Test Automation"
+
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 5000
+    label: "Memproses step selanjutnya"
+
+- tapOn: 
+    point: 288, 414
+    label: "Tap untuk masuk pada siklus yang telah dibuat [AUT2.1]"
+
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 5000
+    label: "Memproses step selanjutnya"
+
+- tapOn: 
+    point: 566, 79
+    label: "Tap pada icon Hamburger di pojok kanan atas"
+
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 5000
+    label: "Memproses step selanjutnya"
+
+- tapOn: "Pengaturan Siklus"
+- scrollUntilVisible:
+    element:
+      text: "Hapus"
+    direction: DOWN # DOWN|UP|LEFT|RIGHT (optional, default: DOWN)
+- scroll
+- scroll
+
+- tapOn: "Hapus"
+  
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 2000
+    label: "Memproses step selanjutnya"
+
+- tapOn: "Ya, Saya Yakin"
+
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 5000
+    label: "Memproses step selanjutnya" 
+- stopApp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+
+
+
+
+
+  
+
+

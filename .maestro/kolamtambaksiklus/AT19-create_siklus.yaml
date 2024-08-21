@@ -1,0 +1,152 @@
+appId: tech.jala.android.lite
+name: AT19
+tags:
+  - AT19
+---
+## [CREATE]
+# 1. Login akun jala.automation
+- runFlow: login_email.yaml
+
+#Bugfix
+- tapOn:
+    text: "Lite"
+    repeat: 3
+    delay: 5000
+    label: "Memproses step selanjutnya..."
+# 2. Pilih menu [Kolam]
+- tapOn: 
+    point: 238, 689 #Kolam
+    waitToSettleTimeoutMs: 2000 # ms
+    label: "Tap untuk masuk pada menu [Kolam]"
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 5000
+    label: "Memproses step selanjutnya"
+
+
+
+
+
+# 3. Pilih field Tambak = "Test Automation"
+- tapOn: 
+    point: 306, 218 #Pilih field tambak
+    label: "Tap untuk memilih field tambak yang diinginkan[Test Automation]"
+- tapOn: "Test Automation"
+
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 2000
+    label: "Memproses step selanjutnya"
+
+- tapOn: 
+    text: "Mulai Siklus"
+    index: 0
+
+- tapOn:
+    text: "Total Tebar"
+- inputText: "100000"
+
+- tapOn:
+    text: "Pilih tipe total te.*"
+- tapOn: "Bruto .*"
+
+- tapOn:
+    text: "Opsional"
+    index: 0
+- inputText: "1"
+
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 2000
+    label: "Memproses step selanjutnya"
+
+- tapOn:
+    text: "Opsional"
+    index: 0
+- inputText: "3"
+- hideKeyboard
+
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 2000
+    label: "Memproses step selanjutnya..."
+
+- tapOn: "Pilih spesies"
+- tapOn: "Penaeus Vannamei"
+
+- tapOn: 
+    text: "Harga pakan"
+    index: 1
+
+- inputText: "15000"
+
+
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 2000
+    label: "Memproses step selanjutnya"
+
+- tapOn:
+    text: "Mulai Siklus"
+    enabled: on
+
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 5000
+    label: "Memproses step selanjutnya..."
+
+#Assert Data
+- assertVisible: "Kembali ke Daftar Kolam"
+
+- stopApp
+- clearState
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+
+
+
+
+
+  
+
+

@@ -1,0 +1,76 @@
+appId: tech.jala.android.lite
+name: AT12
+tags:
+  - AT12
+---
+- clearState
+- launchApp
+
+# Login akun jala.automation ~
+- runFlow: login_email.yaml
+
+- tapOn: 
+    text: "Lite"
+    repeat: 3
+    delay: 5000
+# Pilih menu [Kolam]
+- tapOn: 
+    point: 238, 689 #Kolam
+    label: "Tap pada icon [Kolam]"
+    waitToSettleTimeoutMs: 5000 # ms
+
+- waitForAnimationToEnd:
+    timeout: 5000
+
+# Pilih field Tambak = "Test Automation"
+- tapOn: 
+    point: 306, 218
+    label: "Tap untuk pilih Field Tambak"
+
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn: "Test Automation"
+
+- waitForAnimationToEnd:
+    timeout: 5000
+
+# Pilih icon Gear pada pojok kanan atas
+- tapOn:
+    point: 573, 81 
+    label: "Tap untuk pilih icon Gear di Pojok Kanan Atas"
+
+- waitForAnimationToEnd:
+    timeout: 5000
+
+## ASSERT DATA
+- assertVisible: "Test Automation"
+- assertVisible: "DI YOGYAKARTA"
+- assertVisible: "BANTUL"
+- assertVisible: "PAJANGAN"
+- assertVisible: "TRIWIDADI"
+- scrollUntilVisible:
+    element:
+      text: "Zona Waktu"
+    direction: down
+- scroll
+- waitForAnimationToEnd:
+    timeout: 5000
+- assertVisible: "Indonesian Rupiah"
+
+- stopApp
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+  
+
+
