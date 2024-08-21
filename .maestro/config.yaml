@@ -46,3 +46,4 @@ executionOrder:
 # 2. Dapat mengatur urutan pengeksekusian test, 
 #    yang sangat berguna untuk runtutan tes crud yang memiliki 'dependencies' pada tes yang berkaitan dalam feature yang sama.
 #    (executionOrder[continueOnFailure & flowsOrder])
+#by adit
