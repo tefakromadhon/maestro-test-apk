@@ -2,6 +2,9 @@
 flows:
   - "**"
 includeTags:
+  - AT47-AT49
+excludeTags:
+  - login
   - AT2
   - AT3
   - AT5
@@ -20,30 +23,4 @@ includeTags:
   - AT19
   - AT20
   - AT21
-  - AT22 
-excludeTags:
-  - login
-
-executionOrder:
-    continueOnFailure: false
-    flowsOrder:
-        - AT11
-        - AT12
-        - AT13
-        - AT15
-        - AT16
-        - AT17
-        - AT19
-        - AT20
-        - AT21
-        - AT22
-        - AT18
-        - AT14
-
-# readme: 
-# File config ini diperlukan untuk kepentingan konfigurasi workspace dan workflow:
-# 1. Dapat mengatur apa saja tes yang ingin diikut sertakan dan tidak diikut sertakan (flows, includTafs, excludeTags)
-# 2. Dapat mengatur urutan pengeksekusian test, 
-#    yang sangat berguna untuk runtutan tes crud yang memiliki 'dependencies' pada tes yang berkaitan dalam feature yang sama.
-#    (executionOrder[continueOnFailure & flowsOrder])
-#by adit
+  - AT22
