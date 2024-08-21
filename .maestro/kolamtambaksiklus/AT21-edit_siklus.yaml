@@ -26,6 +26,7 @@ tags:
 - tapOn: 
     point: 238, 689 #Kolam
     waitToSettleTimeoutMs: 5000 # ms
+    label: "Tap untuk masuk pada menu [Kolam]"
 - waitForAnimationToEnd:
     timeout: 5000
 - tapOn: 
@@ -38,6 +39,7 @@ tags:
 # 3. Pilih field Tambak = "Test Automation"
 - tapOn: 
     point: 306, 218 #Pilih field tambak
+    label: "Tap untuk memilih field tambak yang diinginkan"
 - tapOn: "Test Automation"
 - tapOn: 
     text: "DELAY(IGNORE THIS)"
@@ -48,6 +50,7 @@ tags:
 
 - tapOn: 
     point: 288, 414
+    label: "Tap untuk masuk pada siklus yang telah dibuat [AUT2.1]"
 
 - tapOn: 
     text: "DELAY(IGNORE THIS)"
@@ -58,6 +61,7 @@ tags:
 
 - tapOn: 
     point: 566, 79
+    label: "Tap pada icon Hamburger di pojok kanan atas"
 
 - tapOn: 
     text: "DELAY(IGNORE THIS)"
@@ -69,7 +73,9 @@ tags:
 - tapOn: "Pengaturan Siklus"
 
 #Edit data Total Tebar
-- tapOn: "100.000"
+- tapOn: 
+    text: "100.000"
+    label: "Mengedit data pada field Total Tebar"
 - eraseText
 - inputText: "120000"
 
@@ -85,7 +91,9 @@ tags:
     label: "Memproses step selanjutnya"
 
 #Edit data Harga Pakan
-- tapOn: "15.000"
+- tapOn: 
+    text: "15.000"
+    label: "Mengedit data pada field Harga Pakan"
 - eraseText
 - inputText: "17000"
 
@@ -106,12 +114,6 @@ tags:
 
 - stopApp
 
-
-
-
-
-#REVISI
-#REVISIcuy
 
 
 

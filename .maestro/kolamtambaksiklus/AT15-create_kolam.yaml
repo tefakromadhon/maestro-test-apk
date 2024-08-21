@@ -26,6 +26,7 @@ tags:
 - tapOn: 
     point: 238, 689 #Kolam
     waitToSettleTimeoutMs: 2000 # ms
+    label: "Tap untuk pilih menu [Kolam]"
 - waitForAnimationToEnd:
     timeout: 2000
 - tapOn: 
@@ -41,6 +42,7 @@ tags:
 # 3. Pilih field Tambak = "Test Automation"
 - tapOn: 
     point: 306, 218 #Pilih field tambak
+    label: "Tap untuk pilih field tambak "Test Automation"
 - tapOn: "Test Automation"
 # 4. Pilih tombol [Tambah Kolam]
 - tapOn: "Tambah Kolam"
@@ -70,6 +72,7 @@ tags:
 # 8. Input field 'Panjang Kolam' = "10"
 - tapOn:
     point: 155,788
+    label: "Tap pada field 'Panjang Kolam'"
 - inputText:
     text: "10"
     label: "input field panjang kolam = 10"
@@ -84,6 +87,7 @@ tags:
 # 9. Input field 'Lebar Kolam' = "12"
 - tapOn:
     point: 448, 793
+    label: "Tap pada field 'Lebar Kolam"
 - inputText:
     text: "12"
     label: "input field lebar kolam = 12"
@@ -98,6 +102,7 @@ tags:
 # 10. Input field 'Kedalaman' = "1.5"
 - tapOn:
     point: 457, 892
+    label: "Tap untuk input field 'Kedalaman"
 - inputText:
     text: "1.5"
 - hideKeyboard
@@ -117,7 +122,6 @@ tags:
 ##ASSERT DATA NANTI MASUKKAN KESINI
 - stopApp
 
-#REVISIcuy
 
 
 

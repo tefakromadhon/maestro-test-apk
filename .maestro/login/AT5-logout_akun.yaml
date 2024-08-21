@@ -48,10 +48,34 @@ tags:
 - waitForAnimationToEnd:
     timeout: 5000
 
-# Assert Data
+# Assert Data untuk masuk ke Page Beranda
 - assertVisible: 
     text: "Lite" ##Pastikan di Widget Inspector apakah bisa di pick~
     label: "Assert dapat masuk ke page Beranda"
+- assertVisible:
+    text: "Monitoring"
+    label: "Satu paket assert data verifikasi telah masuk ke page Beranda"
+- assertVisible:
+    text: "Kolam"
+    label: "Satu paket assert data verifikasi telah masuk ke page Beranda"
+- assertVisible:
+    text: "Aktivitas"
+    label: "Satu paket assert data verifikasi telah masuk ke page Beranda"
+- assertVisible:
+    text: "Simulasi"
+    label: "Satu paket assert data verifikasi telah masuk ke page Beranda"
+- assertVisible:
+    text: "Harga"
+    label: "Satu paket assert data verifikasi telah masuk ke page Beranda"
+- assertVisible:
+    text: "Kabar"
+    label: "Satu paket assert data verifikasi telah masuk ke page Beranda"
+- assertVisible:
+    text: "Penyakit"
+    label: "Satu paket assert data verifikasi telah masuk ke page Beranda"
+- assertVisible:
+    text: "Prediksi"
+    label: "Satu paket assert data verifikasi telah masuk ke page Beranda"
 
 - tapOn: 
     text: "DELAY(IGNORE THIS)"
@@ -64,7 +88,7 @@ tags:
 
 - tapOn:
     point: 545, 1155
-    label: "Tap pada Akun"
+    label: "Tap pada menu Akun di pojok kanan bawah"
 
 - scrollUntilVisible:
     element: 
@@ -91,7 +115,5 @@ tags:
 
 - stopApp
 
-#REVISI
-#REVISIcuy
 
 

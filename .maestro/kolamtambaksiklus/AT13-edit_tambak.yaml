@@ -26,6 +26,7 @@ tags:
     point: 238, 689 #Kolam
     waitToSettleTimeoutMs: 5000 # ms
     delay: 5000
+    label: "Pilih Icon untuk  masuk Menu Kolam"
 - waitForAnimationToEnd:
     timeout: 20000
 - extendedWaitUntil:
@@ -36,9 +37,11 @@ tags:
     text: "Tambak"
     repeat: 2
     delay: 2000 #Ngakalin
+    label: "Memproses step selanjutnya..."
 
 - tapOn: 
     point: 306, 218 #Pilih field tambak
+    label: "Tap untuk pilih field tambak"
 
 - tapOn: 
     text: "Test Automation"
@@ -50,12 +53,14 @@ tags:
 # Pilih icon Gear pada pojok kanan atas
 - tapOn:
     point: 573, 81 
+    label: "Tap untuk pilih icon gear di pojok kanan atas"
 
 - waitForAnimationToEnd:
     timeout: 5000
 # Ubah field 'Luas' = "10000"
 - tapOn:
     point: 279, 334 #Tap Field Luas
+    label: "Tap untuk memilih field luas"
 - eraseText
 - inputText: "10000"
 
@@ -78,7 +83,7 @@ tags:
 # Ubah field 'Kelurahan' = "Tambaksari"
 - tapOn: 
     text: "Kelurahan"
-    label: Pilih Kelurahan
+    label: "Pilih Kelurahan"
     retryTapIfNoChange: false
 - tapOn: 
     text: "TAMBAKSARI"
@@ -98,7 +103,6 @@ tags:
 - assertVisible: "Kembali ke Menu Utama"
 
 - stopApp
-#REVISIcuy
   
 
   

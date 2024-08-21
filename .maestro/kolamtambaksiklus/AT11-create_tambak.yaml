@@ -9,7 +9,7 @@ tags:
 
 - tapOn:
     point: 297,197 #point field tambak~
-    label: "Tap Field Tambak"
+    label: "Tap Untuk Pilih Field Tambak"
 
 - tapOn:
     text: "Tambah Tambak"
@@ -79,7 +79,7 @@ tags:
 - assertVisible: "Kembali ke Menu Utama"
 
 - stopApp
-#REVISIcuy
+
   
 
 

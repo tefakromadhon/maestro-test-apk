@@ -18,6 +18,7 @@ tags:
 - tapOn: 
     point: 238, 689 #Kolam
     waitToSettleTimeoutMs: 2000 # ms
+    label: "Tap untuk memilih menu Kolam"
 - waitForAnimationToEnd:
     timeout: 2000
 - tapOn: 
@@ -29,10 +30,12 @@ tags:
 # 3. Pilih field Tambak = "Test Automation"
 - tapOn: 
     point: 306, 218 #Pilih field tambak
+    label: "Tap untuk memilih field tambak yang diinginkan [Test Automation]"
 - tapOn: "Test Automation"
 # 4. Pilih icon Gear pada card kolam
 - tapOn:
     point: 544,379
+    label: "Tap pada icon gear di card kolam"
 # 5. Pilih tombol [Hapus]
 - tapOn: "Hapus"
 # 6. Pilih tombol [Ya] pada modal konfirmasi
@@ -41,8 +44,7 @@ tags:
 ###Assert Data NANTI MASUKKAN KESINI
 
 - stopApp
-#REVISIaku
-#REVISIcuy
+
 
 
 

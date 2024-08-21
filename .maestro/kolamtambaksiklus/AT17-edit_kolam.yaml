@@ -18,6 +18,7 @@ tags:
 - tapOn: 
     point: 238, 689 #Kolam
     waitToSettleTimeoutMs: 2000 # ms
+    label: "Tap untuk memilih menu Kolam"
 - waitForAnimationToEnd:
     timeout: 2000
 - tapOn: 
@@ -29,18 +30,22 @@ tags:
 # 3. Pilih field Tambak = "Test Automation"
 - tapOn: 
     point: 306, 218 #Pilih field tambak
+    label: "Tap untuk memilih field tambak yang diinginkan"
 - tapOn: "Test Automation"
 # 4. Pilih tombol gear pada card nama kolam
 - tapOn:
     point: 544,379
+    label: "Tap pada tombol gear pada card nama kolam"
 # 5. Ubah field 'Panjang' = "11"
 - tapOn:
     point: 170,546
+    label: "Tap untuk mengedit/ubah pada field [Panjang]"
 - eraseText
 - inputText: "11"
 # 6. Ubah field 'Lebar' = "13"
 - tapOn:
     point: 453,551
+    label: "Tap untuk mengedit/ubah pada field [Lebar]"
 - eraseText
 - inputText: "13"
 - hideKeyboard
@@ -61,8 +66,7 @@ tags:
 ##ASSERT DATA NANTI  MASUKKAN KESINI
 
 - stopApp
-#REVISIuhuy
-#REVISIcuy
+
 
 
 

@@ -20,6 +20,7 @@ tags:
 - tapOn: 
     point: 238, 689 #Kolam
     waitToSettleTimeoutMs: 2000 # ms
+    label: "Tap untuk masuk pada menu [Kolam]"
 - waitForAnimationToEnd:
     timeout: 2000
 - tapOn: 
@@ -32,6 +33,7 @@ tags:
 
 - tapOn: 
     point: 306, 218 #Pilih field tambak
+    label: "Tap untuk memilih field tambak 'Test Automation'"
 - tapOn: 
     text: "Test Automation"
     delay: 2000
@@ -44,6 +46,7 @@ tags:
 
 - tapOn:
     point: 544,379
+    label: "Tap icon gear untuk melihat settingan Kolam"
 - tapOn: 
     text: "DELAY(IGNORE THIS)"
     optional: true
@@ -57,7 +60,6 @@ tags:
 - assertVisible: "1,5"
 
 - stopApp
-#REVISIcuy
 
     
 

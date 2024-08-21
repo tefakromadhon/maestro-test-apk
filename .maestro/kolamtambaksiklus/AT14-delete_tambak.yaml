@@ -23,11 +23,13 @@ tags:
 - tapOn: 
     point: 238, 689 #Kolam
     waitToSettleTimeoutMs: 5000 # ms
+    label: "Tap untuk pilih Icon masuk Menu Kolam"
 # Pilih field Tambak = "Test Automation"
 - waitForAnimationToEnd:
     timeout: 20000
 - tapOn: 
     point: 306, 218 #Pilih field tambak
+    label: "Tap untuk pilih Field Tambak"
 - waitForAnimationToEnd:
     timeout: 5000
 - tapOn: "Test Automation"
@@ -38,6 +40,7 @@ tags:
 # Pilih icon Gear pada pojok kanan atas
 - tapOn:
     point: 573, 81 
+    label: "Tap untuk pilih icon gear pada pojok kanan atas"
 
 - waitForAnimationToEnd:
     timeout: 5000
@@ -51,7 +54,6 @@ tags:
     retryTapIfNoChange: false
 - stopApp
   
-#REVISIcuy
   
 
   

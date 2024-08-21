@@ -1,7 +1,14 @@
-#config.yaml ini
+#config.yaml
 flows:
   - "**"
 includeTags:
+  - AT2
+  - AT3
+  - AT5
+  - AT6
+  - AT7
+  - AT9
+  - AT10
   - AT11
   - AT12
   - AT13
@@ -16,11 +23,7 @@ includeTags:
   - AT22 
 excludeTags:
   - login
-  - AT2
-  - AT3
-  - AT5
-  - AT9
-  - AT10
+
 executionOrder:
     continueOnFailure: false
     flowsOrder:
@@ -37,5 +40,9 @@ executionOrder:
         - AT18
         - AT14
 
-  #revisi
-#REVISIcuy
+# readme: 
+# File config ini diperlukan untuk kepentingan konfigurasi workspace dan workflow:
+# 1. Dapat mengatur apa saja tes yang ingin diikut sertakan dan tidak diikut sertakan (flows, includTafs, excludeTags)
+# 2. Dapat mengatur urutan pengeksekusian test, 
+#    yang sangat berguna untuk runtutan tes crud yang memiliki 'dependencies' pada tes yang berkaitan dalam feature yang sama.
+#    (executionOrder[continueOnFailure & flowsOrder])
