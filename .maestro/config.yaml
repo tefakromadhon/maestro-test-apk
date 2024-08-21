@@ -24,3 +24,9 @@ excludeTags:
   - AT20
   - AT21
   - AT22
+
+  #File config.yaml ini diperlukan untuk menentukan:
+  #1. test apa saja yang ingin diikut sertakan
+  #2. untuk kasus tes crud yang kemungkinan ada beberapa test yang memiliki keterkaitan saling bergantung pada test lain,
+  #   dalam file config.yaml ini dapat menentukan executionOrder untuk menentukan urutan test yang ingin diurutkan
+  #3. Untuk lengkapnya mengenai cara konfigurasi ada di docs maestro ui testing
