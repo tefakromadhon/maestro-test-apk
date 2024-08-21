@@ -42,7 +42,7 @@ tags:
 # 3. Pilih field Tambak = "Test Automation"
 - tapOn: 
     point: 306, 218 #Pilih field tambak
-    label: "Tap untuk pilih field tambak "Test Automation"
+    label: "Tap untuk pilih field tambak [Test Automation]"
 - tapOn: "Test Automation"
 # 4. Pilih tombol [Tambah Kolam]
 - tapOn: "Tambah Kolam"
