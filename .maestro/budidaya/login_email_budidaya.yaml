@@ -1,7 +1,7 @@
 appId: tech.jala.android.lite
-name: AT5
+name: template_login_budidaya
 tags:
-  - AT5
+  - login
 ---
 - clearState
 - launchApp
@@ -36,9 +36,7 @@ tags:
     text: "jalaistimewa"
     label: "Ketik password"
 
-- tapOn:
-    text: "Masuk"
-    label: "Menyembunyikan keyboard terlebih dahulu"
+- hideKeyboard
 
 - tapOn: 
     text: "Masuk"
@@ -48,50 +46,11 @@ tags:
 - waitForAnimationToEnd:
     timeout: 5000
 
-# Assert Data
+# Assert Data~
 - assertVisible: 
-    text: "Lite" ##Pastikan di Widget Inspector apakah bisa di pick~
+    text: "Lite" ##Pastikan di Widget Inspector apakah bisa di pick
     label: "Assert dapat masuk ke page Beranda"
 
-- tapOn: 
-    text: "DELAY(IGNORE THIS)"
-    optional: true
-    repeat: 3
-    delay: 2000
-    label: "Memproses step selanjutnya"
-
-#Tap Akun
-
-- tapOn:
-    point: 545, 1155
-    label: "Tap pada Akun"
-
-- scrollUntilVisible:
-    element: 
-      text: "Keluar"
-    direction: down
-
-- tapOn:
-    text: "Keluar"
-
-- tapOn:
-    text: "Keluar"
-
-- extendedWaitUntil:
-    visible: "Masuk"
-    timeout: 10000
-    label: "Redirect ke Halaman Login"
-
-
-#Assert Visible
-- assertVisible:
-    text: "Selamat Datang di JALA"
-- assertVisible:
-    text: "Masuk"
-
-- stopApp
 
 #REVISI
 #REVISIcuy
-
-

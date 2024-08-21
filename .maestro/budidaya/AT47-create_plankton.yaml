@@ -1,0 +1,246 @@
+appId: tech.jala.android.lite
+name: AT47-AT49
+tags:
+  - AT47-AT49
+---
+- clearState
+- launchApp
+
+## [CREATE]
+# 1. Login akun jala.automationa
+- runFlow: login_email.yaml
+
+#Bugfix
+- tapOn:
+    text: "Lite"
+    repeat: 3
+    delay: 5000
+
+
+# 2. Pilih menu [Kolam]
+- tapOn: 
+    point: 238, 689 #Kolam
+    waitToSettleTimeoutMs: 2000 # ms
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 5000
+    label: "Memproses step selanjutnya"
+
+
+
+
+# 3. Pilih field Tambak = "Automation Flutter"
+- tapOn: 
+    point: 306, 218 #Pilih field tambak
+- tapOn: "Automation Flutter"
+# 4. Pilih Kolam A1
+- tapOn: 
+    point: 277, 433
+    label: "Tap pada kolam A1"
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 2000
+    label: "Memproses step selanjutnya"
+
+# 5. Swipe ke kanan sampai ada pada tab Plankton
+- swipe:              # This command swipes in the left direction from the middle of the device. 
+    direction: LEFT
+- swipe:              # This command swipes in the left direction from the middle of the device. 
+    direction: LEFT
+- swipe:              # This command swipes in the left direction from the middle of the device. 
+    direction: LEFT
+- swipe:              # This command swipes in the left direction from the middle of the device. 
+    direction: LEFT
+- swipe:              # This command swipes in the left direction from the middle of the device. 
+    direction: LEFT
+- swipe:              # This command swipes in the left direction from the middle of the device. 
+    direction: LEFT
+- swipe:              # This command swipes in the left direction from the middle of the device. 
+    direction: LEFT
+- swipe:              # This command swipes in the left direction from the middle of the device. 
+    direction: LEFT
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 1500
+    label: "Memproses step selanjutnya"
+
+# 6. Tap pada +Catatan
+- tapOn:
+    point: 313, 1157
+
+#7. Tap  dan enter teks pada field Green Algae
+- tapOn:
+    text: "-"
+    index: 0
+- inputText: "100"
+- hideKeyboard
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 2000
+    label: "Memproses step selanjutnya"
+
+#8. Tap dan enter teks pada field Blue Green Algae
+- tapOn:
+    text: "-"
+    index: 0
+- inputText: "200"
+- hideKeyboard
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 2000
+    label: "Memproses step selanjutnya"
+- tapOn:
+    text: "Parameter lainnya"
+    point: 136, 1027
+
+- scrollUntilVisible:
+    element:
+      text: "Protozoa .*"
+    direction: DOWN
+- tapOn: 
+    text: "-"
+    index: 1
+- inputText: "300"
+- hideKeyboard
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 2000
+    label: "Memproses step selanjutnya"
+- tapOn: "Simpan"
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 5000
+    label: "Memproses step selanjutnya"
+- tapOn:
+    point: 565, 289
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 2000
+    label: "Memproses step selanjutnya"
+- tapOn: "Ubah"
+
+#Assert Data
+- assertVisible: "100.0"
+- assertVisible: "200.0"
+- assertVisible: "600.0"
+
+
+#Edit Data
+    #Edit Data Green Algae
+- tapOn: "100.0"
+- eraseText
+- inputText: 10,5
+- hideKeyboard
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 2000
+    label: "Memproses step selanjutnya"
+
+    #Edit Data Blue Green Algae
+- tapOn: "200.0"
+- eraseText
+- inputText: 20,7
+- hideKeyboard
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 2000
+    label: "Memproses step selanjutnya"
+
+# Simpan data Edit
+- tapOn: "Simpan"
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 5000
+    label: "Memproses step selanjutnya"
+
+- tapOn:
+    point: 565, 289
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 2000
+    label: "Memproses step selanjutnya"
+- tapOn: "Ubah"
+
+#Assert Data Setelah Di edit
+- assertVisible: "10.5"
+- assertVisible: "20.7"
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 5000
+    label: "Memproses step selanjutnya"
+
+# Delete CRUD
+- tapOn: "Hapus"
+- tapOn: "Ya, Saya Yakin"
+- tapOn: 
+    text: "DELAY(IGNORE THIS)"
+    optional: true
+    repeat: 3
+    delay: 2000
+    label: "Memproses step selanjutnya"
+
+# Assert bahwa data plankton telah berhasil di delete
+- assertVisible: "Belum ada data tersimpan"
+- stopApp
+
+#REVISIcuy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+
+
+
+
+
+  
+
+
