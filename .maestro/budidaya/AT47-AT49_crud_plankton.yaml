@@ -102,8 +102,8 @@ tags:
     delay: 2000
     label: "Memproses step selanjutnya"
 - tapOn:
-    text: "Parameter lainnya"
-    point: 136, 1027
+    point: 131, 1012
+    label: "Tap pada parameter lainnya"
 
 - scrollUntilVisible:
     element:
