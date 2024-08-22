@@ -5,7 +5,6 @@ includeTags:
   - AT2
 excludeTags:
   - login
-  - AT2
   - AT3
   - AT5
   - AT6
