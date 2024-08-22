@@ -2,7 +2,7 @@
 flows:
   - "**"
 includeTags:
-  - AT47-AT49
+  - AT2
 excludeTags:
   - login
   - AT2
@@ -24,6 +24,7 @@ excludeTags:
   - AT20
   - AT21
   - AT22
+  - AT47-AT49
 
   #File config.yaml ini diperlukan untuk menentukan:
   #1. test apa saja yang ingin diikut sertakan
