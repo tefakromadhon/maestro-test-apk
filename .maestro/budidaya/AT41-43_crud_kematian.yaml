@@ -78,7 +78,7 @@ tags:
 - clearState
 - launchApp
 
-- runFlow: login_email.yaml
+- runFlow: login_email_budidaya.yaml
 
 ## Langsung skip ke step setelah login selesai 
 
@@ -154,7 +154,7 @@ tags:
 - clearState
 - launchApp
 
-- runFlow: login_email.yaml
+- runFlow: login_email_budidaya.yaml
 
 ## Langsung skip ke step setelah login selesai 
 
