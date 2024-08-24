@@ -1,0 +1,45 @@
+appId: tech.jala.android.lite
+name: AT31
+tags: 
+  - AT31
+---
+- clearState
+- launchApp
+
+- runFlow: login_email.yaml
+
+## Langsung skip ke step setelah login selesai 
+
+- tapOn: 
+    text: "Lite"
+    repeat: 3
+    delay: 5000
+- tapOn:
+    point: 235, 681 ## skip pick kolam ##
+    label: "TAP KOLAM" 
+    waitToSettleTimeoutMs: 5000 
+    
+- waitForAnimationToEnd:
+    timeout: 5000
+## pick kolam ##
+- tapOn: 
+    text: "Kolam"
+    repeat: 3
+    delay: 5000
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn:
+    point: 62, 376
+    label: "klik kolam A1" ## klik kolam A1##
+- swipe:
+    direction: LEFT ## klik pakan ##
+- tapOn: 
+    point: 555, 343
+    label: "klik EDIT" 
+- tapOn: "Hapus"
+- tapOn: "Ya, Saya Yakin"
+- extendedWaitUntil:
+    visible: "Belum ada data tersimpan"
+    timeout: 10000 ##10 det##
+- assertVisible: 
+    text: "Belum ada data tersimpan"

@@ -1,0 +1,162 @@
+appId: tech.jala.android.lite
+name: AT38-40
+tags:
+  - AT38-40
+---
+- clearState
+- launchApp
+
+- runFlow: login_email.yaml
+
+#pilih field Automation Flutter
+- tapOn:
+    point: 150,220
+
+- tapOn:
+    text: "Automation Flutter"
+
+- assertVisible:
+    text: "Kolam"
+
+- tapOn:
+    text: "Lite"
+    repeat: 3
+    delay: 5000
+
+#pilih menu kolam
+- tapOn:
+    point: 235, 681
+
+- tapOn:
+    text: "Kolam"
+    repeat: 3
+    delay: 5000
+    
+ #tap A1
+- tapOn:
+    point: 57, 375
+    
+#tap sampling
+- tapOn:
+    point: 435, 155
+
+#tap panen
+- tapOn:
+    point: 578, 161
+    
+- tapOn: 
+    text: "Catatan"
+    
+- tapOn: 
+    text: "Pilih Jenis Panen"
+- tapOn: 
+    text: "Parsial"
+
+- tapOn: 
+    text: "-"
+    index: 2
+- inputText: 
+    text: "45000"
+    label: "Ketik 45000"
+
+- hideKeyboard
+
+- tapOn: 
+    text: "-"
+    index: 1
+- inputText: 
+    text: "100"
+    label: "Ketik 100"
+
+- hideKeyboard
+
+- tapOn: 
+    text: "-"
+    index: 0
+- inputText: 
+    text: "400"
+    label: "Ketik 400"
+
+- hideKeyboard
+
+- scroll
+
+-  scrollUntilVisible:
+    element:
+      text: "Catatan" # or any other selecto
+    direction: DOWN
+    
+
+- tapOn: 
+    text: "Pembeli"
+- inputText: 
+    text: "JALA"
+    label: "Ketik JALA"
+  
+- hideKeyboard
+
+- tapOn: 
+    text: "Catatan"
+- inputText: 
+    text: "Test automation"
+   
+- hideKeyboard
+
+- tapOn: "Simpan"
+
+# tap icon edit
+- tapOn:
+    point: 548,282
+
+- tapOn: 
+    text: "45000.0"
+    
+- eraseText 
+
+- inputText: 
+    text: "47500"
+    label: "Ketik 47500"
+    
+- hideKeyboard
+
+- tapOn: 
+    text: "100.0"
+    
+- eraseText 
+
+- inputText: 
+    text: "95"
+    label: "Ketik 95"
+
+- hideKeyboard
+
+- tapOn: 
+    text: "400.0"
+
+- eraseText 
+
+- inputText: 
+    text: "375"
+    label: "Ketik 375"
+
+- hideKeyboard
+
+- tapOn: "Simpan"
+
+# tap icon edit
+- tapOn:
+    point: 555,287
+
+- tapOn:
+    text: "Hapus"
+
+- tapOn: "Ya, Saya Yakin"
+
+
+
+
+
+
+
+
+

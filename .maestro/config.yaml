@@ -3,8 +3,6 @@ flows:
   - "**"
 includeTags:
   - AT2
-excludeTags:
-  - login
   - AT3
   - AT5
   - AT6
@@ -23,7 +21,39 @@ excludeTags:
   - AT20
   - AT21
   - AT22
-  - AT47-AT49
+  - AT23-25
+  - AT26-27
+  - AT28-30
+  - AT31
+  - AT32-34
+  - AT35-37
+  - AT38-40
+  - AT41-43
+  - AT44-46
+  - AT47-49
+  - AT50-52
+  - AT53-55
+excludeTags:
+  - login
+executionOrder:
+    continueOnFailure: false # default is true
+    flowsOrder:
+        - AT11
+        - AT12
+        - AT13
+        - AT15
+        - AT16
+        - AT17
+        - AT19
+        - AT20
+        - AT21
+        - AT22
+        - AT18
+        - AT14
+        - AT26-27
+        - AT28-30
+        - AT31
+
 
   #File config.yaml ini diperlukan untuk menentukan:
   #1. test apa saja yang ingin diikut sertakan

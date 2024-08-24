@@ -1,0 +1,174 @@
+appId: tech.jala.android.lite
+name: AT50-52
+tags:
+  - AT50-52
+---
+- clearState
+- launchApp
+
+- runFlow: login_email.yaml
+
+#pilih field Automation Flutter
+- tapOn:
+    point: 150,220
+
+- tapOn:
+    text: "Automation Flutter"
+
+- assertVisible:
+    text: "Kolam"
+
+- tapOn:
+    text: "Lite"
+    repeat: 3
+    delay: 5000
+
+#pilih menu kolam
+- tapOn:
+    point: 235, 681
+
+- tapOn:
+    text: "Kolam"
+    repeat: 3
+    delay: 5000
+    
+ #tap A1
+- tapOn:
+    point: 57, 375
+
+#tap sampling
+- tapOn:
+    point: 435, 155
+
+#tap panen
+- tapOn:
+    point: 578, 161
+
+#tap kimia
+- tapOn:
+    point: 547, 155
+
+- swipe:              
+    direction: LEFT
+
+- swipe:              
+    direction: LEFT
+
+- tapOn: 
+    text: "Catatan"
+
+- scroll
+
+-  scrollUntilVisible:
+    element:
+      text: "Total Bacteria (CFU/ml)" # or any other selecto
+    direction: DOWN
+
+- tapOn: 
+    text: "-"
+    index: 5
+    
+- inputText: 
+    text: "500"
+    label: "500"
+
+- hideKeyboard
+
+- tapOn: 
+    text: "-"
+    index: 4
+- inputText: 
+    text: "400"
+    label: "400"
+
+- hideKeyboard
+
+- tapOn: 
+    text: "-"
+    index: 3
+- inputText: 
+    text: "300"
+    label: "Ketik 300"
+
+- hideKeyboard
+
+- tapOn: 
+    text: "-"
+    index: 2
+- inputText: 
+    text: "600"
+    label: "600"
+- hideKeyboard
+
+- tapOn: 
+    text: "-"
+    index: 1
+- inputText: 
+    text: "200"
+    label: "Ketik 200"
+
+- hideKeyboard
+
+- tapOn: 
+    text: "-"
+    index: 0
+- inputText: 
+    text: "100"
+    label: "Ketik 100"
+
+- hideKeyboard
+
+- tapOn: "Simpan"
+
+- assertNotVisible:
+    text: "Simpan"
+    
+# tap icon edit
+- tapOn:
+    point: 548,282
+
+- tapOn:
+    text: "Ubah"
+
+- tapOn:
+    text: "600.0"
+    
+- eraseText 
+
+- inputText:
+    text: "600,43"
+    label: "Ketik 600,43"
+
+- tapOn:
+    text: "200.0"
+
+- eraseText 
+
+- inputText:
+    text: "200,32"
+    label: "Ketik 200,32"
+
+- tapOn:
+    text: "100.0"
+
+- eraseText 
+
+- inputText:
+    text: "100,21"
+    label: "Ketik 100,21"
+
+- hideKeyboard
+
+- tapOn: "Simpan"
+
+- assertNotVisible:
+    text: "Simpan"
+    
+# tap icon edit
+- tapOn:
+    point: 548,282
+
+- tapOn:
+    text: "Hapus"
+
+- tapOn: "Ya, Saya Yakin"

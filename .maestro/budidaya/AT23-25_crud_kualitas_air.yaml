@@ -1,0 +1,218 @@
+appId: tech.jala.android.lite
+name: AT23-25
+tags: 
+  - AT23-25
+---
+- clearState
+- launchApp
+
+- runFlow: login_email.yaml
+
+## Langsung skip ke step setelah login selesai 
+- tapOn: 
+    text: "Lite"
+    repeat: 3
+    delay: 5000
+- tapOn:
+    point: 235, 681 ## skip pick kolam ##
+    label: "tap kolam"
+    waitToSettleTimeoutMs: 5000
+    delay: 5000
+
+- tapOn: 
+    text: "Kolam"
+    repeat: 3
+    delay: 5000
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn:
+    point: 62, 376
+    label: klik kolam  ## klik kolam A1##
+- tapOn:
+    point: 311, 1155
+    label: "tap Catatan"
+- tapOn: "Pilih warna air"
+- tapOn: "Coklat"
+- tapOn: "Pilih cuaca"
+- tapOn: "Cerah berawan"
+- tapOn: 
+    text: "-"
+    label: "tap ORP"
+    index: 5 ## klik orp## ##clear##
+- inputText: "172,5"
+- tapOn:
+    text: "-"
+    index: 4
+    label: "input field kecerahan" ## klik kecerahan## 
+- inputText: "72,5"
+- tapOn: 
+    text: "-"
+    label: "input field DO"
+    index: 3 ## klik kecerahan## ##clear##
+- inputText: "4,45"
+- tapOn: 
+    text: "-"
+    label: "input field suhu" ## mengisi laman suhu##
+    index: 2 ## klik suhu##
+- inputText: "26,5"
+- tapOn: 
+    text: "-"
+    label: "input field salinitas"
+    index: 1 ## klik suhu## ##clear##
+- inputText: "15,5"
+
+- tapOn: 
+    text: "-"
+    label: "input field ph"
+    index: 0 ## klik do# ##isi field orp##
+- inputText: "7,5"
+
+- hideKeyboard
+- scroll
+- tapOn: 
+    text: "Parameter lainnya"
+    point: 138, 1015
+    label: "tap parameter lainnya"
+
+- scrollUntilVisible:
+    element:
+      text: "Ketinggian Air (cm)"
+- scroll
+
+- tapOn: 
+    text: "-"
+    label: "input field tinggi air"
+    index: 3 
+- scroll
+- inputText: "110,5" ## input ini masih error karena bsgian field ini tertutup oleh Keyboard ##
+- tapOn: 
+    text: "-"
+    label: "input field persen DO"
+    index: 0
+- inputText: "99,5"
+
+- tapOn: 
+    text: "Simpan" ## klik simpan##
+    waitToSettleTimeoutMs: 7000
+    delay: 10000
+- extendedWaitUntil:
+    notVisible: 
+        text: "Simpan" # or any other selector
+    timeout: 10000
+- stopApp
+
+- clearState
+- launchApp
+
+- runFlow: login_email.yaml
+
+## Langsung skip ke step setelah login selesai 
+- tapOn: 
+    text: "Lite"
+    repeat: 3
+    delay: 5000
+- tapOn:
+    point: 235, 681 ## skip pick kolam ##
+    label: "tap kolam"
+    waitToSettleTimeoutMs: 5000
+    delay: 5000
+
+- tapOn: 
+    text: "Kolam"
+    repeat: 3
+    delay: 5000
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn:
+    point: 62, 376
+    label: "klik kolam A1"  ## klik kolam A1##
+
+
+## klik edit ##
+- tapOn: 
+    point: 555, 372
+    label: "tap edit" 
+
+## assert data ##
+- assertVisible: "7.5"
+- assertVisible: "15.5"
+- assertVisible: "26.5"
+- assertVisible: "4.45"
+- assertVisible: "72.5"
+- assertVisible: "172.5"
+
+
+- tapOn: 
+    text: "26.5"
+    label: "input field suhu"
+- eraseText
+- inputText: "27,5"
+- tapOn: 
+    text: "4.45"
+    label: "input field DO"
+- eraseText
+- inputText: "5,45"
+- tapOn: 
+    text: "7.5"
+    label: "input field pH"
+- eraseText
+- inputText: "8,5"
+- tapOn: 
+    text: "15.5"
+    label: "input field salinitas"
+- eraseText
+- inputText: "16,5"
+
+- tapOn: 
+    text: "Simpan" ## klik simpan##
+    waitToSettleTimeoutMs: 7000
+    delay: 10000
+- extendedWaitUntil:
+    notVisible: 
+        text: "Simpan" # or any other selector
+    timeout: 10000
+- stopApp
+
+
+- clearState
+- launchApp
+
+- runFlow: login_email.yaml
+
+## Langsung skip ke step setelah login selesai 
+- tapOn: 
+    text: "Lite"
+    repeat: 3
+    delay: 5000
+- tapOn:
+    point: 235, 681 ## skip pick kolam ##
+    label: "klik kolam" 
+    waitToSettleTimeoutMs: 5000
+    delay: 5000
+
+- tapOn: 
+    text: "Kolam"
+    repeat: 3
+    delay: 5000
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn:
+    point: 62, 376
+    label: "klik kolam A1"  ## klik kolam A1##
+
+## klik edit ##
+- tapOn: 
+    point: 555, 372 
+    label: "klik EDIT" 
+
+- tapOn: "Hapus"
+- tapOn: "Ya, Saya Yakin"
+
+
+- extendedWaitUntil:
+    visible: "Belum ada data tersimpan"
+    timeout: 10000 ##10 det##
+
+  
+
+

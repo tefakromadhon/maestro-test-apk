@@ -1,0 +1,173 @@
+appId: tech.jala.android.lite
+name: AT28-30
+tags: 
+  - AT28-30
+---
+- clearState
+- launchApp
+
+- runFlow: login_email.yaml
+
+## Langsung skip ke step setelah login selesai 
+
+- tapOn: 
+    text: "Lite"
+    repeat: 3
+    delay: 5000
+- tapOn:
+    point: 235, 681 ## skip pick kolam ##
+    waitToSettleTimeoutMs: 5000
+    label: "klik kolam" 
+    
+- waitForAnimationToEnd:
+    timeout: 5000
+ ## pick kolam ##
+- tapOn: 
+    text: "Kolam"
+    repeat: 3
+    delay: 5000
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn:
+    point: 62, 376
+    label: "klik kolam A1"  ## pick kolam A1 ##
+
+- swipe:
+    direction: LEFT
+- swipe:
+    direction: LEFT ## ANCO ##
+- tapOn: 
+    point: 311, 1155 ##catatan##
+    label: "klik +catatan" 
+- tapOn:
+    point: 314, 500 ## pilih tanggal pakan##
+    label: "klik tanggal pakan" 
+- tapOn: 
+    point: 91, 1150 ## pilih tanggal pemberian pakan##
+    label: "klik pemberian pakan" 
+- tapOn: 
+    point: 300, 613 ## jam pemberian Pakan##
+    label: "klik jam pemberian pakan" 
+- tapOn: 
+    point: 90, 1150 ## 12 kg## 
+- scrollUntilVisible:
+    element:
+      text: "Catatan Optional"
+- scroll
+- tapOn: 
+    point: 315, 970
+    label: "klik catatan" 
+- inputText: "Test Anco Habis"
+- tapOn: 
+    text: "Simpan" ## klik simpan##
+    waitToSettleTimeoutMs: 7000
+    delay: 10000
+- extendedWaitUntil:
+    notVisible: 
+        text: "Simpan" # or any other selector
+    timeout: 10000 
+- stopApp
+
+- clearState
+- launchApp
+
+- runFlow: login_email.yaml
+
+## Langsung skip ke step setelah login selesai 
+- tapOn: 
+    text: "Lite"
+    repeat: 3
+    delay: 5000
+- tapOn:
+    point: 235, 681 ## skip pick kolam ##
+    waitToSettleTimeoutMs: 5000
+    delay: 5000
+    label: "klik kolam" 
+
+- tapOn: 
+    text: "Kolam"
+    repeat: 3
+    delay: 5000
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn:
+    point: 62, 376
+    label: "klik kolam A1"  ## klik kolam A1##
+- swipe:
+    direction: LEFT
+- swipe:
+    direction: LEFT ## anco ##
+
+- tapOn: 
+    point: 564, 372 ## edit ##
+    label: "klik EDIT" 
+- tapOn:
+    text: "Sisa Sedikit"
+    index: 0
+- scrollUntilVisible:
+    element:
+      text: "Anco 4"
+- tapOn:
+    text: "Sisa Banyak"
+    index: 1
+- scrollUntilVisible:
+    element:
+      text: "Catatan Optional"
+- tapOn:
+    text: "Sisa Banyak"
+    index: 1
+- tapOn:
+    text: "Sisa Sedikit"
+    index: 2 
+- tapOn: 
+    text: "Simpan" ## klik simpan##
+    waitToSettleTimeoutMs: 7000
+    delay: 10000
+- extendedWaitUntil:
+    notVisible: 
+        text: "Simpan" # or any other selector
+    timeout: 10000 
+- stopApp
+
+- clearState
+- launchApp
+
+- runFlow: login_email.yaml
+
+## Langsung skip ke step setelah login selesai 
+- tapOn: 
+    text: "Lite"
+    repeat: 3
+    delay: 5000
+- tapOn:
+    point: 235, 681 ## skip pick kolam ##
+    waitToSettleTimeoutMs: 5000
+    delay: 5000
+    label: "klik KOLAM" 
+
+- tapOn: 
+    text: "Kolam"
+    repeat: 3
+    delay: 5000
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn:
+    point: 62, 376
+    label: "klik kolam A1"  ## klik kolam A1##
+- swipe:
+    direction: LEFT
+- swipe:
+    direction: LEFT
+- tapOn:
+    point: 564, 372
+    label: "klik kolam EDIT"  
+- tapOn: "Hapus"
+- tapOn: "Ya, Saya Yakin"
+
+
+- extendedWaitUntil:
+    visible: "Belum ada data tersimpan"
+    timeout: 10000 ##10 det##
+    
+- assertVisible: 
+    text: "Belum ada data tersimpan"

@@ -1,0 +1,159 @@
+appId: tech.jala.android.lite
+name: AT44-46
+tags:
+  - AT44-46
+---
+- clearState
+- launchApp
+
+- runFlow: login_email.yaml
+
+#pilih field Automation Flutter
+- tapOn:
+    point: 150,220
+
+- tapOn:
+    text: "Automation Flutter"
+
+- assertVisible:
+    text: "Kolam"
+
+- tapOn:
+    text: "Lite"
+    repeat: 3
+    delay: 5000
+
+#pilih menu kolam
+- tapOn:
+    point: 235, 681
+
+- tapOn:
+    text: "Kolam"
+    repeat: 3
+    delay: 5000
+    
+ #tap A1
+- tapOn:
+    point: 57, 375
+
+#tap sampling
+- tapOn:
+    point: 435, 155
+
+#tap panen
+- tapOn:
+    point: 578, 161
+
+#tap kimia
+- tapOn:
+    point: 547, 155
+    
+- tapOn: 
+    text: "Catatan"
+    
+- tapOn: 
+    text: "-"
+    index: 2
+- inputText: 
+    text: "300"
+    label: "Ketik 300"
+
+- tapOn: 
+    text: "-"
+    index: 1
+- inputText: 
+    text: "200"
+    label: "Ketik 200"
+
+- hideKeyboard
+
+- tapOn: 
+    text: "-"
+    index: 0
+- inputText: 
+    text: "100"
+    label: "Ketik 100"
+
+- hideKeyboard
+
+- tapOn:
+    text: "Parameter lainnya"
+    point: 142, 1025
+
+- scroll
+
+-  scrollUntilVisible:
+    element:
+      text: "Kesadahan (Hardness) (ppm)" # or any other selecto
+    direction: DOWN
+
+- tapOn: 
+    text: "-"
+    index: 0
+- inputText: 
+    text: "400"
+    label: "Ketik 400"
+    
+- hideKeyboard
+
+- tapOn: "Simpan"
+
+- assertNotVisible:
+    text: "Simpan"
+
+# tap icon titik tiga
+- tapOn:
+    point: 553, 286
+
+- tapOn:
+    text: "Ubah"
+- tapOn: 
+    text: "300.0"
+
+- eraseText 
+
+- inputText: 
+    text: "30,24"
+    label: "Ketik 30,24"
+
+- hideKeyboard
+
+- tapOn: 
+    text: "200.0"
+
+- eraseText 
+
+- inputText: 
+    text: "20,7"
+    label: "Ketik 20,7"
+
+- hide keyboard
+
+- tapOn: 
+    text: "100.0"
+
+- eraseText 
+
+- inputText: 
+    text: "10,5"
+    label: "Ketik 10,5"
+
+- hideKeyboard
+
+- tapOn: "Simpan"
+
+- assertNotVisible:
+    text: "Simpan"
+    
+# tap icon titik tiga
+- tapOn:
+    point: 553, 286
+
+- tapOn:
+    text: "Hapus"
+
+- tapOn: "Ya, Saya Yakin"
+
+#test dulu ya
+
+
