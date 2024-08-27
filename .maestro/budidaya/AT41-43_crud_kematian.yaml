@@ -142,7 +142,7 @@ tags:
 - eraseText
 - inputText: "2"
 - tapOn: 
-    text: "Simpan" ## klik simpan##
+    text: "Simpan" ## klik simpan###
     waitToSettleTimeoutMs: 7000
     delay: 10000
 - extendedWaitUntil:
