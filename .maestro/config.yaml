@@ -2,26 +2,6 @@
 flows:
   - "**"
 includeTags:
-  - AT2
-  - AT3
-  - AT5
-  - AT6
-  - AT7
-  - AT9
-  - AT10
-excludeTags:
-  - AT11
-  - AT12
-  - AT13
-  - AT14
-  - AT15
-  - AT16
-  - AT17
-  - AT18
-  - AT19
-  - AT20
-  - AT21
-  - AT22
   - AT23-25
   - AT26-27
   - AT28-30
@@ -34,6 +14,35 @@ excludeTags:
   - AT47-49
   - AT50-52
   - AT53-55
+excludeTags:
+  - AT2
+  - AT3
+  - AT5
+  - AT6
+  - AT7
+  - AT9
+  - AT10
+  - AT11
+  - AT12
+  - AT13
+  - AT14
+  - AT15
+  - AT16
+  - AT17
+  - AT18
+  - AT19
+  - AT20
+  - AT21
+  - AT22
+
+executionOrder:
+    continueOnFailure: false # default is true
+    flowsOrder:
+        - AT26-27
+        - AT28-30
+        - AT31
+      
+
 
 
   #File config.yaml ini diperlukan untuk menentukan:
