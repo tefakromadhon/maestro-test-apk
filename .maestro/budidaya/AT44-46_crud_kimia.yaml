@@ -84,9 +84,9 @@ tags:
 - scroll
 
 -  scrollUntilVisible:
-    element:
-      text: "Kesadahan (Hardness) (ppm)" # or any other selecto
-    direction: DOWN
+     element:
+       text: "Kesadahan (Hardness) (ppm)" # or any other selecto
+     direction: DOWN
 
 - tapOn: 
     text: "-"
@@ -118,9 +118,9 @@ tags:
 - scroll
 
 -  scrollUntilVisible:
-    element:
-      text: "Kesadahan (Hardness) (ppm)" # or any other selecto
-    direction: DOWN
+     element:
+       text: "Kesadahan (Hardness) (ppm)" # or any other selecto
+     direction: DOWN
 
 - tapOn:
     text: "Ubah"
@@ -168,8 +168,8 @@ tags:
 
 #assert data#
 - assertVisible: " 10.5"
--  assertVisible: " 20.7"
--  assertVisible: " 30.24"
+- assertVisible: " 20.7"
+- assertVisible: " 30.24"
 
 - tapOn:
     text: "Hapus"
