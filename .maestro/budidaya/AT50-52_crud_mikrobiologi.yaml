@@ -61,9 +61,9 @@ tags:
 - scroll
 
 -  scrollUntilVisible:
-    element:
-      text: "Total Bacteria (CFU/ml)" # or any other selecto
-    direction: DOWN
+     element:
+       text: "Total Bacteria (CFU/ml)" # or any other selecto
+     direction: DOWN
 
 - tapOn: 
     text: "-"
@@ -135,9 +135,9 @@ tags:
 - scroll
 
 -  scrollUntilVisible:
-    element:
-      text: "Total Bacteria (CFU/ml)" # or any other selecto
-    direction: DOWN
+     element:
+       text: "Total Bacteria (CFU/ml)" # or any other selecto
+     direction: DOWN
 
 - assertVisible: "400"
 - assertVisible: "500"
