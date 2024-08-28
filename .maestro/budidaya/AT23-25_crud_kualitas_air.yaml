@@ -134,7 +134,11 @@ tags:
 - tapOn: 
     point: 555, 372
     label: "tap edit" 
-
+- tapOn: 
+    text: "Delay (Ignore This)"
+    optional: true
+    repeat: 2
+    delay: 3000
 ## assert data ##
 - assertVisible: "7.5"
 - assertVisible: "15.5"
