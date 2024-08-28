@@ -10,7 +10,8 @@ tags:
 - runFlow: login_email.yaml
 
 - tapOn: 
-    text: "Lite"
+    text: "Delay (Ignore This)"
+    optional: true
     repeat: 3
     delay: 5000
 # Pilih menu [Kolam]

@@ -18,8 +18,9 @@ tags:
 - assertVisible:
     text: "Kolam"
 
-- tapOn:
-    text: "Lite"
+- tapOn: 
+    text: "Delay (Ignore This)"
+    optional: true
     repeat: 3
     delay: 5000
 
@@ -107,6 +108,20 @@ tags:
 # tap icon edit
 - tapOn:
     point: 548,282
+#asser data#
+- assertVisible
+
+- scroll
+
+-  scrollUntilVisible:
+    element:
+      text: "Catatan" # or any other selecto
+    direction: DOWN
+- assertVisible: "400.0"
+- assertVisible: "100.0"
+- assertVisible: "45000.0"
+- assertVisible: "JALA"
+
 
 - tapOn: 
     text: "45000.0"
@@ -147,11 +162,27 @@ tags:
 - tapOn:
     point: 555,287
 
+- assertVisible
+
+- scroll
+
+-  scrollUntilVisible:
+    element:
+      text: "Catatan" # or any other selecto
+    direction: DOWN
+- assertVisible: "375.0"
+- assertVisible: "95.0"
+- assertVisible: "47500.0"
+- assertVisible: "JALA"
+
+
 - tapOn:
     text: "Hapus"
 
 - tapOn: "Ya, Saya Yakin"
 
+# Assert bahwa data perlakuan telah berhasil di delete
+- assertVisible: "Belum ada data tersimpan"
 
 
 

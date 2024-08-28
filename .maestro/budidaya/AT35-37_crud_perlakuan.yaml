@@ -18,8 +18,9 @@ tags:
 - assertVisible:
     text: "Kolam"
 
-- tapOn:
-    text: "Lite"
+- tapOn: 
+    text: "Delay (Ignore This)"
+    optional: true
     repeat: 3
     delay: 5000
 
@@ -69,6 +70,10 @@ tags:
 - tapOn:
     point: 563,349
 
+#assert data#
+- assertVisible: "Saprotam 2,5kg"
+- assertVisible: "Test pemberian perlakuan" # or any other selecto
+  
 - tapOn: 
     text: "Saprotam 2,5kg"
 
@@ -97,11 +102,17 @@ tags:
 - tapOn:
     point: 563,349
 
+#assert data#
+- assertVisible: "Kapur Tohor 100gr"
+- assertVisible: "ubah pemberian perlakuan"
+
 - tapOn:
     text: "Hapus"
 
 - tapOn: "Ya, Saya Yakin"
 
+# Assert bahwa data perlakuan telah berhasil di delete
+- assertVisible: "Belum ada data tersimpan"
 
 
 

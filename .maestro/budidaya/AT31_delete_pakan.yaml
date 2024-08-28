@@ -11,7 +11,8 @@ tags:
 ## Langsung skip ke step setelah login selesai 
 
 - tapOn: 
-    text: "Lite"
+    text: "Delay (Ignore This)"
+    optional: true
     repeat: 3
     delay: 5000
 - tapOn:

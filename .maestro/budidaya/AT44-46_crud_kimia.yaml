@@ -18,8 +18,9 @@ tags:
 - assertVisible:
     text: "Kolam"
 
-- tapOn:
-    text: "Lite"
+- tapOn: 
+    text: "Delay (Ignore This)"
+    optional: true
     repeat: 3
     delay: 5000
 
@@ -105,6 +106,22 @@ tags:
 - tapOn:
     point: 553, 286
 
+#assert data#
+- assertVisible: "100"
+- assertVisible: "200"
+- assertVisible: "300"
+
+- tapOn:
+    text: "Parameter lainnya"
+    point: 142, 1025
+
+- scroll
+
+-  scrollUntilVisible:
+    element:
+      text: "Kesadahan (Hardness) (ppm)" # or any other selecto
+    direction: DOWN
+
 - tapOn:
     text: "Ubah"
 - tapOn: 
@@ -149,11 +166,17 @@ tags:
 - tapOn:
     point: 553, 286
 
+#assert data#
+- assertVisible: " 10.5"
+-  assertVisible: " 20.7"
+-  assertVisible: " 30.24"
+
 - tapOn:
     text: "Hapus"
 
 - tapOn: "Ya, Saya Yakin"
 
-#test dulu ya
+# Assert bahwa data kimia telah berhasil di delete
+- assertVisible: "Belum ada data tersimpan"
 
 

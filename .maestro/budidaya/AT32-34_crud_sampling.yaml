@@ -18,9 +18,10 @@ tags:
 - assertVisible:
     text: "Kolam"
 
-- tapOn:
-    text: "Lite"
-    repeat: 2
+- tapOn: 
+    text: "Delay (Ignore This)"
+    optional: true
+    repeat: 3
     delay: 5000
     
 #pilih menu kolam
@@ -70,9 +71,27 @@ tags:
 
 - tapOn: "Simpan"
 
+
+
 #Pilih icon [edit] pada data current date
 - tapOn:
     point: 548,282
+
+ tapOn: 
+    text: "Delay (Ignore This)"
+    optional: true
+    repeat: 2
+    delay: 3000
+
+#assert data#
+- assertVisible: "1.15"
+- scroll
+-  scrollUntilVisible:
+    element:
+      text: "Test data sampling" # or any other selecto
+    direction: DOWN
+
+- assertVisible: "Test data sampling"
 
 - scroll
 
@@ -110,11 +129,21 @@ tags:
 - tapOn:
     point: 548,282
 
+#assert data#
+- assertVisible: "0.75"
+- scroll
+-  scrollUntilVisible:
+    element:
+      text: "edit data sampling" # or any other selecto
+    direction: DOWN
+
 - tapOn:
     text: "Hapus"
 
 # Tap Ya, Saya Yakin
 - tapOn: "Ya, Saya Yakin"
 
+# Assert bahwa data sampling telah berhasil di delete
+- assertVisible: "Belum ada data tersimpan"
 
 

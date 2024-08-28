@@ -18,8 +18,9 @@ tags:
 - assertVisible:
     text: "Kolam"
 
-- tapOn:
-    text: "Lite"
+- tapOn: 
+    text: "Delay (Ignore This)"
+    optional: true
     repeat: 3
     delay: 5000
 
@@ -126,6 +127,20 @@ tags:
 # tap icon edit
 - tapOn:
     point: 548,282
+#assert data#
+- assertVisible: "100"
+- assertVisible: "200"
+- assertVisible: "600"
+
+- scroll
+
+-  scrollUntilVisible:
+    element:
+      text: "Total Bacteria (CFU/ml)" # or any other selecto
+    direction: DOWN
+
+- assertVisible: "400"
+- assertVisible: "500"
 
 - tapOn:
     text: "Ubah"
@@ -167,8 +182,15 @@ tags:
 # tap icon edit
 - tapOn:
     point: 548,282
+#assert data#
+- assertVisible: "100.21"
+- assertVisible: "200.32"
+- assertVisible: "600.43"
 
 - tapOn:
     text: "Hapus"
 
 - tapOn: "Ya, Saya Yakin"
+
+#assert data#
+- assertVisible: "Belum ada data tersimpan"

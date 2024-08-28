@@ -12,8 +12,9 @@ tags:
 
 
 #Bugfix
-- tapOn:
-    text: "Lite"
+- tapOn: 
+    text: "Delay (Ignore This)"
+    optional: true
     repeat: 3
     delay: 5000
 

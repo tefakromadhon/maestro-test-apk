@@ -2,6 +2,10 @@
 flows:
   - "**"
 includeTags:
+  - AT23-25
+  - AT53-54
+  - AT55
+excludeTags:
   - AT2
   - AT3
   - AT5
@@ -9,7 +13,6 @@ includeTags:
   - AT7
   - AT9
   - AT10
-excludeTags:
   - AT11
   - AT12
   - AT13
@@ -22,7 +25,6 @@ excludeTags:
   - AT20
   - AT21
   - AT22
-  - AT23-25
   - AT26-27
   - AT28-30
   - AT31
@@ -33,7 +35,7 @@ excludeTags:
   - AT44-46
   - AT47-49
   - AT50-52
-  - AT53-55
+
 
 
   #File config.yaml ini diperlukan untuk menentukan:

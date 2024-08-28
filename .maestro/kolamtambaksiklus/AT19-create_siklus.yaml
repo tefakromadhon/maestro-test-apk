@@ -8,11 +8,11 @@ tags:
 - runFlow: login_email.yaml
 
 #Bugfix
-- tapOn:
-    text: "Lite"
+- tapOn: 
+    text: "Delay (Ignore This)"
+    optional: true
     repeat: 3
     delay: 5000
-    label: "Memproses step selanjutnya..."
 # 2. Pilih menu [Kolam]
 - tapOn: 
     point: 238, 689 #Kolam

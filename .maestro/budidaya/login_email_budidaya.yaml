@@ -48,9 +48,6 @@ tags:
 
 # Assert Data~
 # Assert Data untuk masuk ke Page Beranda
-- assertVisible: 
-    text: "Lite" ##Pastikan di Widget Inspector apakah bisa di pick~
-    label: "Assert dapat masuk ke page Beranda"
 - assertVisible:
     text: "Monitoring"
     label: "Satu paket assert data verifikasi telah masuk ke page Beranda"
@@ -58,10 +55,10 @@ tags:
     text: "Kolam"
     label: "Satu paket assert data verifikasi telah masuk ke page Beranda"
 - assertVisible:
-    text: "Aktivitas"
+    text: "Foto Sampling"
     label: "Satu paket assert data verifikasi telah masuk ke page Beranda"
 - assertVisible:
-    text: "Simulasi"
+    text: "Prediksi"
     label: "Satu paket assert data verifikasi telah masuk ke page Beranda"
 - assertVisible:
     text: "Harga"
@@ -71,7 +68,4 @@ tags:
     label: "Satu paket assert data verifikasi telah masuk ke page Beranda"
 - assertVisible:
     text: "Penyakit"
-    label: "Satu paket assert data verifikasi telah masuk ke page Beranda"
-- assertVisible:
-    text: "Prediksi"
     label: "Satu paket assert data verifikasi telah masuk ke page Beranda"

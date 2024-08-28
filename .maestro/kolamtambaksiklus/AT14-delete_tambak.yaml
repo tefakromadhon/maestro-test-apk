@@ -16,7 +16,8 @@ tags:
         text: "Kolam" # or any other selector
     timeout: 10000
 - tapOn: 
-    text: "Lite"
+    text: "Delay (Ignore This)"
+    optional: true
     repeat: 3
     delay: 5000
 # Pilih menu [Kolam]
