@@ -15,8 +15,7 @@ tags:
 - tapOn:
     text: "Automation Flutter"
     
-- assertVisible:
-    text: "Kolam"
+- assertVisible: "Kolam"
 
 - tapOn: 
     text: "Delay (Ignore This)"
@@ -77,7 +76,7 @@ tags:
 - tapOn:
     point: 548,282
 
- tapOn: 
+- tapOn: 
     text: "Delay (Ignore This)"
     optional: true
     repeat: 2
