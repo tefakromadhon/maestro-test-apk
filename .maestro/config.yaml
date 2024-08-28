@@ -3,8 +3,7 @@ flows:
   - "**"
 includeTags:
   - AT23-25
-  - AT53-54
-  - AT55
+
 excludeTags:
   - AT2
   - AT3
@@ -35,12 +34,13 @@ excludeTags:
   - AT44-46
   - AT47-49
   - AT50-52
+  - AT53-54
+  - AT55
 
 executionOrder:
     continueOnFailure: false # default is true
     flowsOrder:
-        - AT53-54
-        - AT55
+        - AT23-25
 
 #RUNNING
 
