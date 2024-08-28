@@ -42,6 +42,7 @@ executionOrder:
         - AT53-54
         - AT55
 
+#RUNNING
 
   #File config.yaml ini diperlukan untuk menentukan:
   #1. test apa saja yang ingin diikut sertakan
