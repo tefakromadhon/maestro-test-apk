@@ -7,8 +7,17 @@ tags:
 - launchApp
 
 - tapOn:
+    label: "delay"
+    text: "Hanya ingin mencoba?"
+- tapOn:
+    text: "delay ignore"
+    optional: true
+    repeat: 2
+    delay: 2000
+- tapOn:
     label: "Pilih tombol [Masuk]"
     text: "Masuk"
+    
     
 
 - tapOn: 
