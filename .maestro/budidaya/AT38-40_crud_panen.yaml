@@ -118,14 +118,14 @@ tags:
 #assert data#
 - assertVisible: "400.0"
 - assertVisible: "100.0"
-- assertVisible: "45000.0
+- assertVisible: "45000.0"
 
 - scroll
 
 -  scrollUntilVisible:
-    element:
-      text: "Catatan" # or any other selecto
-    direction: DOWN
+     element:
+       text: "Catatan" 
+     direction: DOWN
 
 - assertVisible: "JALA"
 - asserVisible: "Test automation"
@@ -170,7 +170,9 @@ tags:
 - tapOn:
     point: 555,287
 
-- assertVisible
+- assertVisible: "375.0"
+- assertVisible: "95.0"
+- assertVisible: "47500.0"
 
 - scroll
 
@@ -178,10 +180,8 @@ tags:
     element:
       text: "Catatan" # or any other selecto
     direction: DOWN
-- assertVisible: "375.0"
-- assertVisible: "95.0"
-- assertVisible: "47500.0"
 - assertVisible: "JALA"
+- assertVisible: "Test automation"
 
 
 - tapOn:
