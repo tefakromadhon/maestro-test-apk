@@ -108,8 +108,17 @@ tags:
 # tap icon edit
 - tapOn:
     point: 548,282
-#asser data#
-- assertVisible
+
+tapOn: 
+    text: "Delay (Ignore This)"
+    optional: true
+    repeat: 3
+    delay: 5000
+
+#assert data#
+- assertVisible: "400.0"
+- assertVisible: "100.0"
+- assertVisible: "45000.0
 
 - scroll
 
@@ -117,10 +126,9 @@ tags:
     element:
       text: "Catatan" # or any other selecto
     direction: DOWN
-- assertVisible: "400.0"
-- assertVisible: "100.0"
-- assertVisible: "45000.0"
+
 - assertVisible: "JALA"
+- asserVisible: "Test automation"
 
 
 - tapOn: 
