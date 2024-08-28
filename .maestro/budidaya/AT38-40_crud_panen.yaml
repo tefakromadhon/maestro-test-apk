@@ -128,7 +128,7 @@ tags:
      direction: DOWN
 
 - assertVisible: "JALA"
-- asserVisible: "Test automation"
+- assertVisible: "Test automation"
 
 
 - tapOn: 
