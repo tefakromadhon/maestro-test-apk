@@ -109,7 +109,7 @@ tags:
 - tapOn:
     point: 548,282
 
-tapOn: 
+- tapOn: 
     text: "Delay (Ignore This)"
     optional: true
     repeat: 3
