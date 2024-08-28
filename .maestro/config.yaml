@@ -36,6 +36,11 @@ excludeTags:
   - AT47-49
   - AT50-52
 
+executionOrder:
+    continueOnFailure: false # default is true
+    flowsOrder:
+        - AT53-54
+        - AT55
 
 
   #File config.yaml ini diperlukan untuk menentukan:
