@@ -44,3 +44,5 @@ excludeTags:
   #   dalam file config.yaml ini dapat menentukan executionOrder untuk menentukan urutan test yang ingin diurutkan
   #3. Untuk lengkapnya mengenai cara konfigurasi ada di docs maestro ui testing
   #4. File config ini dinamis, sesuai keperluan testing, semisal mau di set di test semua atau hanya beberapa bisa diatur disini.
+
+  ###
