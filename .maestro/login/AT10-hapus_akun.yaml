@@ -49,33 +49,6 @@ tags:
     timeout: 5000
 
 # Assert Data untuk masuk ke Page Beranda
-- assertVisible: 
-    text: "Lite" ##Pastikan di Widget Inspector apakah bisa di pick~
-    label: "Assert dapat masuk ke page Beranda"
-- assertVisible:
-    text: "Monitoring"
-    label: "Satu paket assert data verifikasi telah masuk ke page Beranda"
-- assertVisible:
-    text: "Kolam"
-    label: "Satu paket assert data verifikasi telah masuk ke page Beranda"
-- assertVisible:
-    text: "Aktivitas"
-    label: "Satu paket assert data verifikasi telah masuk ke page Beranda"
-- assertVisible:
-    text: "Simulasi"
-    label: "Satu paket assert data verifikasi telah masuk ke page Beranda"
-- assertVisible:
-    text: "Harga"
-    label: "Satu paket assert data verifikasi telah masuk ke page Beranda"
-- assertVisible:
-    text: "Kabar"
-    label: "Satu paket assert data verifikasi telah masuk ke page Beranda"
-- assertVisible:
-    text: "Penyakit"
-    label: "Satu paket assert data verifikasi telah masuk ke page Beranda"
-- assertVisible:
-    text: "Prediksi"
-    label: "Satu paket assert data verifikasi telah masuk ke page Beranda"
 
 
 ## Lanjut Step

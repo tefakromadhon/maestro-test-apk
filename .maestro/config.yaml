@@ -2,9 +2,6 @@
 flows:
   - "**"
 includeTags:
-  - AT23-25
-
-excludeTags:
   - AT2
   - AT3
   - AT5
@@ -36,6 +33,27 @@ excludeTags:
   - AT50-52
   - AT53-54
   - AT55
+  - AT23-25
+
+excludeTags:
+  - login
+
+# config.yaml
+executionOrder:
+    continueOnFailure: false 
+    flowsOrder:
+        - AT11
+        - AT12
+        - AT13
+        - AT15
+        - AT16
+        - AT17
+        - AT19
+        - AT20
+        - AT21
+        - AT22
+        - AT18
+        - AT14
 
 
 

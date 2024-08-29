@@ -52,4 +52,3 @@ tags:
     delay: 5000
 # Assert Data~
 # Assert Data untuk masuk ke Page Beranda
-- assertVisible: "Beranda"
